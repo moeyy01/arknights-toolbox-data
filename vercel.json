@@ -1,13 +1,13 @@
 { 
-  "version": 2,
   "routes": [
-    {"src": "/arknights-toolbox/(.*)","dest": "https://statics.arkn.lolicon.app/arknights-toolbox/$1"}
-  ],
-  "redirects": [
+    {
+      "src": "/arknights-toolbox/(.*)",
+      "dest": "https://statics.arkn.lolicon.app/arknights-toolbox/$1"
+    },
     { 
-      "source": "/",
-      "destination": "https://moeyy.cn/arknights/", 
-      "statusCode": 302
+      "src": "/",
+      "status": 302,
+      "headers": { "Location":"https://moeyy.cn/arknights/" }
     }
   ]
 }
