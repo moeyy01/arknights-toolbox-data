@@ -1,4 +1,10 @@
-{
+{ 
+  "routes": [
+    {
+      "src": "/arknights-toolbox/(.*)",
+      "dest": "https://statics.arkn.lolicon.app/arknights-toolbox/$1"
+    }
+  ],
   "redirects": [
     { 
       "source": "/",
