@@ -40,6 +40,9 @@ import {
   checkObjsNotEmpty,
   getItemType,
   writeOtherData,
+  handleNewDataFormat,
+  fixEnumNum,
+  forceEnumNum,
 } from './common';
 import { retryGet } from './request';
 import { getRichTextCss } from './css';
@@ -47,7 +50,8 @@ import { getPinyin } from './pinyin';
 import { getRomaji } from './romaji';
 import { downloadImageByList } from './download';
 import { processBuildingSkills } from './buildingSkills';
-import { CharPosition, CharProfession, OccPercent } from 'types';
+import { objS2tw, objS2twp } from './s2t';
+import { CharPosition, CharProfession, OccPercent, StageDropType } from 'types';
 import type {
   ActivityTable,
   BuildingData,
@@ -156,7 +160,7 @@ export class DataUpdater {
     const gameData: Record<string, Record<string, any>> = mapValues(LangMap, () => ({}));
     const dataErrorMap: Record<string, Record<string, any>> = mapValues(LangMap, () => ({}));
     const fetchData = async (url: string) =>
-      process.env.UPDATE_SOURCE === 'local' ? ensureReadJsonSync(url) : await retryGet(url);
+      handleNewDataFormat(process.env.UPDATE_SOURCE === 'local' ? ensureReadJsonSync(url) : await retryGet(url));
 
     for (const langShort of Object.keys(LangMap)) {
       for (const [key, url] of Object.entries(gameDataUrl[langShort])) {
@@ -166,6 +170,7 @@ export class DataUpdater {
           gameData[langShort][key] = obj;
         } catch (error) {
           console.warn(`Error loading data ${url}`);
+          console.warn(error);
           dataErrorMap[langShort][key] = error;
         }
       }
@@ -218,6 +223,9 @@ export class DataUpdater {
       {} as Record<string, { name: string; desc: string }>,
     );
     writeLocale(locale, 'term.json', termId2term);
+    if (locale === 'cn') {
+      writeLocale('tw', 'term.json', mapValues(termId2term, objS2twp));
+    }
   }
 
   private async updateCharacterInfo({ gachaTable, characterTable }: GameData, locale: string) {
@@ -242,6 +250,7 @@ export class DataUpdater {
       this.characterInfo = transform(
         pickBy(characterTable, isOperator),
         (obj, { name, appellation, position, tagList, rarity, profession }, id) => {
+          rarity = fixEnumNum(rarity, -1);
           const shortId = id.replace(/^char_/, '');
           if (rarity === 0 && !tagList.includes(ROBOT_TAG_NAME_CN)) {
             tagList.push(ROBOT_TAG_NAME_CN);
@@ -284,6 +293,7 @@ export class DataUpdater {
       {} as Record<string, string>,
     );
     writeLocale(locale, 'character.json', nameId2Name);
+    if (isCN) writeLocale('tw', 'character.json', objS2tw(nameId2Name));
 
     // 获取罗马音
     if (locale === 'jp') {
@@ -338,7 +348,9 @@ export class DataUpdater {
       ({ code, zoneId, stageDropInfo: { displayRewards, displayDetailRewards } }) => {
         const mainRewardIds = new Set(
           map(
-            displayRewards.filter(({ id, dropType }) => isItem(id) && dropType !== 1),
+            displayRewards.filter(
+              ({ id, dropType }) => isItem(id) && forceEnumNum(dropType, StageDropType) !== StageDropType.ONCE,
+            ),
             'id',
           ),
         );
@@ -348,7 +360,7 @@ export class DataUpdater {
             if (!(zoneId in this.dropInfo.event)) this.dropInfo.event[zoneId] = {};
             const eventDrop = this.dropInfo.event[zoneId];
             if (!(id in eventDrop)) eventDrop[id] = {};
-            eventDrop[id][code] = occPercent;
+            eventDrop[id][code] = forceEnumNum(occPercent, OccPercent);
           });
       },
     );
@@ -371,7 +383,7 @@ export class DataUpdater {
           if (!(zoneId in this.dropInfo.retro)) this.dropInfo.retro[zoneId] = {};
           const eventDrop = this.dropInfo.retro[zoneId];
           if (!(id in eventDrop)) eventDrop[id] = {};
-          eventDrop[id][code] = rewardTable[id].occPercent;
+          eventDrop[id][code] = forceEnumNum(rewardTable[id].occPercent, OccPercent);
         });
       },
     );
@@ -404,6 +416,7 @@ export class DataUpdater {
     writeLocale(locale, 'zone.json', zoneId2Name);
 
     if (isCN) {
+      writeLocale('tw', 'zone.json', objS2twp(zoneId2Name));
       writeData('zone.json', {
         zoneToActivity: activityTable.zoneToActivity,
         zoneToRetro: retroTable.zoneToRetro,
@@ -470,6 +483,7 @@ export class DataUpdater {
             transform(
               stageDropList,
               (drop, { stageId, occPer }) => {
+                if (!stageTable.stages[stageId]) return; // fix data bug
                 const { stageType, code } = stageTable.stages[stageId];
                 if (stageType === 'MAIN' || stageType === 'SUB') drop[code] = OccPercent[occPer];
               },
@@ -491,8 +505,9 @@ export class DataUpdater {
     each(stageTable.stages, ({ code, stageType, stageDropInfo: { displayDetailRewards } }) => {
       if (stageType !== 'DAILY') return;
       displayDetailRewards.forEach(({ id, dropType, occPercent }) => {
-        if (id in this.itemInfo && dropType !== 1) {
-          this.itemInfo[id].drop[code] = occPercent;
+        dropType = forceEnumNum(dropType, StageDropType);
+        if (id in this.itemInfo && dropType !== StageDropType.ONCE) {
+          this.itemInfo[id].drop[code] = forceEnumNum(occPercent, OccPercent);
         }
       });
     });
@@ -504,6 +519,8 @@ export class DataUpdater {
   }
 
   private async updateItemData({ itemTable }: GameData, locale: string) {
+    const isCN = locale === 'cn';
+
     const itemId2Name = transform(
       pickBy(itemTable.items, ({ itemId }) => isItem(itemId)),
       (obj, { itemId, name }) => {
@@ -512,13 +529,14 @@ export class DataUpdater {
       {} as Record<string, string>,
     );
     writeLocale(locale, 'material.json', itemId2Name);
+    if (isCN) writeLocale('tw', 'material.json', objS2twp(itemId2Name));
 
     const extItemId2Name = mapValues(pick(itemTable.items, EXT_ITEM), ({ name }, id) =>
       isBattleRecord(id) ? name.replace(/作战记录|作戰記錄| Battle Record|作戦記録|작전기록/, '') : name,
     );
     writeLocale(locale, 'item.json', extItemId2Name);
 
-    if (locale !== 'cn') return;
+    if (!isCN) return;
 
     // 下载材料图片
     const itemIdList = Object.keys(itemId2Name);
@@ -533,6 +551,8 @@ export class DataUpdater {
     { characterTable, skillTable, uniequipTable, charPatchTable, stageTable }: GameData,
     locale: string,
   ) {
+    const isCN = locale === 'cn';
+
     // 技能
     const opSkillTable = mapKeys(
       omitBy(skillTable, (v, k) => k.startsWith('sktok_')),
@@ -543,6 +563,7 @@ export class DataUpdater {
       iconId ? { icon: idStandardization(iconId) } : undefined,
     );
     writeLocale(locale, 'skill.json', skillId2Name);
+    if (isCN) writeLocale('tw', 'skill.json', objS2twp(skillId2Name));
 
     // 模组
     const uniequipId2Name = mapValues(
@@ -554,7 +575,7 @@ export class DataUpdater {
     );
     writeLocale(locale, 'uniequip.json', uniequipId2Name, ['tw']);
 
-    if (locale !== 'cn') return;
+    if (!isCN) return;
 
     // 升变
     const charPatchInfo = mapValues(charPatchTable.infos, ({ tmplIds }, id) => without(tmplIds, id));
@@ -581,7 +602,7 @@ export class DataUpdater {
 
         // 精英化
         const evolve = phases
-          .filter(({ evolveCost }) => evolveCost)
+          .filter(({ evolveCost }) => evolveCost?.length)
           .map(({ evolveCost }) => getMaterialListObject(evolveCost));
 
         // 通用技能
@@ -689,7 +710,7 @@ export class DataUpdater {
           const skills = buffChar.flatMap(({ buffData }) =>
             buffData.map(({ buffId, cond: { phase, level } }) => ({
               id: idStandardization(buffId),
-              unlock: `${phase}_${level}`,
+              unlock: `${fixEnumNum(phase)}_${level}`,
             })),
           );
           if (skills.length) obj[shortId] = skills;
@@ -748,5 +769,15 @@ export class DataUpdater {
         description: mapKeys(buffMd52Description, (v, k) => k.slice(0, this.buildingDescMd5MinLen)),
       },
     });
+
+    if (isCN) {
+      writeLocale('tw', 'building.json', {
+        name: objS2twp(roomEnum2Name),
+        buff: {
+          name: objS2twp(buffId2Name),
+          description: objS2twp(mapKeys(buffMd52Description, (v, k) => k.slice(0, this.buildingDescMd5MinLen))),
+        },
+      });
+    }
   }
 }
