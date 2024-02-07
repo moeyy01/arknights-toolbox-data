@@ -40,18 +40,18 @@ import {
   checkObjsNotEmpty,
   getItemType,
   writeOtherData,
-  handleNewDataFormat,
   fixEnumNum,
   forceEnumNum,
+  fixI18nKey,
 } from './common';
 import { retryGet } from './request';
 import { getRichTextCss } from './css';
 import { getPinyin } from './pinyin';
 import { getRomaji } from './romaji';
-import { downloadImageByList } from './download';
+import { DownloadConfigBuilder, downloadImageByList } from './download';
 import { processBuildingSkills } from './buildingSkills';
 import { objS2tw, objS2twp } from './s2t';
-import { CharPosition, CharProfession, OccPercent, StageDropType } from 'types';
+import { CharPosition, CharProfession, OccPercent, RarityRank, RetroType, StageDropType } from 'types';
 import type {
   ActivityTable,
   BuildingData,
@@ -79,6 +79,7 @@ import type {
   DataJsonBuildingBuff,
   DataJsonBuildingChar,
   AkhrData,
+  DataJsonUniequip,
 } from 'types';
 import {
   AVATAR_IMG_DIR,
@@ -92,6 +93,9 @@ import {
   PURCHASE_CERTIFICATE_ID,
   ROBOT_TAG_NAME_CN,
   SKILL_IMG_DIR,
+  HAS_TW_DATA,
+  UPDATE_FROM_ARKNTOOLS,
+  UNIEQUIP_IMG_DIR,
 } from 'constant';
 
 interface GameData {
@@ -122,13 +126,18 @@ export class DataUpdater {
   private buildingDescMd5MinLen = 0;
   private buildingBuffId2DescriptionMd5: Record<string, string> = {};
 
+  private readonly downloadConfig = new DownloadConfigBuilder();
+
   public async start() {
     await this.fetchGameData();
 
     for (const [locale, data] of Object.entries(this.gameData)) {
       const isCN = locale === 'cn';
 
-      if (isCN) this.updateRichTextCss(data);
+      if (isCN) {
+        this.updateRichTextCss(data);
+        this.updateUniequipInfo(data);
+      }
       this.updateTermDescription(data, locale);
       await this.updateCharacterInfo(data, locale);
       this.updateUnopenedStage(data, locale);
@@ -153,6 +162,8 @@ export class DataUpdater {
     writeData('retro.json', this.retroInfo);
     writeData('event.json', this.eventInfo);
 
+    this.downloadConfig.write();
+
     console.log('Update completed');
   }
 
@@ -160,7 +171,7 @@ export class DataUpdater {
     const gameData: Record<string, Record<string, any>> = mapValues(LangMap, () => ({}));
     const dataErrorMap: Record<string, Record<string, any>> = mapValues(LangMap, () => ({}));
     const fetchData = async (url: string) =>
-      handleNewDataFormat(process.env.UPDATE_SOURCE === 'local' ? ensureReadJsonSync(url) : await retryGet(url));
+      url.startsWith('https://') ? await retryGet(url) : ensureReadJsonSync(url);
 
     for (const langShort of Object.keys(LangMap)) {
       for (const [key, url] of Object.entries(gameDataUrl[langShort])) {
@@ -217,13 +228,13 @@ export class DataUpdater {
         if (!k.startsWith('cc.')) return;
         obj[k.replace(/\W/g, '_')] = {
           name: termName,
-          desc: description,
+          desc: description.replaceAll('\r', ''),
         };
       },
       {} as Record<string, { name: string; desc: string }>,
     );
     writeLocale(locale, 'term.json', termId2term);
-    if (locale === 'cn') {
+    if (locale === 'cn' && !HAS_TW_DATA) {
       writeLocale('tw', 'term.json', mapValues(termId2term, objS2twp));
     }
   }
@@ -293,7 +304,9 @@ export class DataUpdater {
       {} as Record<string, string>,
     );
     writeLocale(locale, 'character.json', nameId2Name);
-    if (isCN) writeLocale('tw', 'character.json', objS2tw(nameId2Name));
+    if (isCN && !HAS_TW_DATA) {
+      writeLocale('tw', 'character.json', objS2tw(nameId2Name));
+    }
 
     // 获取罗马音
     if (locale === 'jp') {
@@ -304,12 +317,22 @@ export class DataUpdater {
 
     // 下载头像
     if (isCN) {
-      await downloadImageByList({
-        idList: Object.keys(nameId2Name),
-        dirPath: AVATAR_IMG_DIR,
-        resPathGetter: id => `avatar/char_${id}.png`,
-        resize: 80,
-      });
+      const avatarIdList = Object.keys(nameId2Name);
+      if (UPDATE_FROM_ARKNTOOLS) {
+        this.downloadConfig.set('avatar', {
+          dir: AVATAR_IMG_DIR,
+          resize: 80,
+          idList: avatarIdList,
+          configGetter: id => ({ id, iconId: `char_${id}` }),
+        });
+      } else {
+        await downloadImageByList({
+          idList: avatarIdList,
+          dirPath: AVATAR_IMG_DIR,
+          resPathGetter: id => `avatar/char_${id}.png`,
+          resize: 80,
+        });
+      }
     }
   }
 
@@ -369,7 +392,10 @@ export class DataUpdater {
   private updateRetroInfo({ retroTable }: GameData, locale: string) {
     this.retroInfo[locale] = {};
     each(retroTable.retroActList, item => {
-      this.retroInfo[locale][item.retroId] = pick(item, ['type', 'startTime', 'linkedActId']);
+      this.retroInfo[locale][fixI18nKey(item.retroId)] = {
+        type: forceEnumNum(item.type, RetroType),
+        ...pick(item, ['startTime', 'linkedActId']),
+      };
     });
   }
 
@@ -408,18 +434,17 @@ export class DataUpdater {
     });
 
     // 插曲 & 别传
-    Object.assign(
-      zoneId2Name,
-      mapValues(retroTable.retroActList, ({ type, name }) => `${name}@:(retroNameAppend.${type})`),
-    );
+    each(retroTable.retroActList, ({ retroId, type, name }) => {
+      zoneId2Name[fixI18nKey(retroId)] = `${name}@:(retroNameAppend.${forceEnumNum(type, RetroType)})`;
+    });
 
     writeLocale(locale, 'zone.json', zoneId2Name);
 
     if (isCN) {
-      writeLocale('tw', 'zone.json', objS2twp(zoneId2Name));
+      if (!HAS_TW_DATA) writeLocale('tw', 'zone.json', objS2twp(zoneId2Name));
       writeData('zone.json', {
         zoneToActivity: activityTable.zoneToActivity,
-        zoneToRetro: retroTable.zoneToRetro,
+        zoneToRetro: mapValues(retroTable.zoneToRetro, fixI18nKey),
       });
     }
   }
@@ -478,7 +503,7 @@ export class DataUpdater {
           sortId: {
             [locale]: sortId,
           },
-          rare: rarity + 1,
+          rare: forceEnumNum(rarity, RarityRank) + 1,
           drop: sortObjectBy(
             transform(
               stageDropList,
@@ -529,7 +554,9 @@ export class DataUpdater {
       {} as Record<string, string>,
     );
     writeLocale(locale, 'material.json', itemId2Name);
-    if (isCN) writeLocale('tw', 'material.json', objS2twp(itemId2Name));
+    if (isCN && !HAS_TW_DATA) {
+      writeLocale('tw', 'material.json', objS2twp(itemId2Name));
+    }
 
     const extItemId2Name = mapValues(pick(itemTable.items, EXT_ITEM), ({ name }, id) =>
       isBattleRecord(id) ? name.replace(/作战记录|作戰記錄| Battle Record|作戦記録|작전기록/, '') : name,
@@ -540,11 +567,23 @@ export class DataUpdater {
 
     // 下载材料图片
     const itemIdList = Object.keys(itemId2Name);
-    await downloadImageByList({
-      idList: itemIdList,
-      dirPath: ITEM_IMG_DIR,
-      resPathGetter: id => `item/${itemTable.items[id].iconId}.png`,
-    });
+    if (UPDATE_FROM_ARKNTOOLS) {
+      this.downloadConfig.set('item', {
+        dir: ITEM_IMG_DIR,
+        idList: itemIdList,
+        configGetter: id => ({
+          id,
+          iconId: itemTable.items[id].iconId,
+          rarity: forceEnumNum(itemTable.items[id].rarity, RarityRank),
+        }),
+      });
+    } else {
+      await downloadImageByList({
+        idList: itemIdList,
+        dirPath: ITEM_IMG_DIR,
+        resPathGetter: id => `item/${itemTable.items[id].iconId}.png`,
+      });
+    }
   }
 
   private async updateSkillInfo(
@@ -563,7 +602,9 @@ export class DataUpdater {
       iconId ? { icon: idStandardization(iconId) } : undefined,
     );
     writeLocale(locale, 'skill.json', skillId2Name);
-    if (isCN) writeLocale('tw', 'skill.json', objS2twp(skillId2Name));
+    if (isCN && !HAS_TW_DATA) {
+      writeLocale('tw', 'skill.json', objS2twp(skillId2Name));
+    }
 
     // 模组
     const uniequipId2Name = mapValues(
@@ -573,7 +614,7 @@ export class DataUpdater {
       ),
       'uniEquipName',
     );
-    writeLocale(locale, 'uniequip.json', uniequipId2Name, ['tw']);
+    writeLocale(locale, 'uniequip.json', uniequipId2Name);
 
     if (!isCN) return;
 
@@ -644,12 +685,22 @@ export class DataUpdater {
     writeData('cultivate.json', cultivate);
 
     // 下载技能图标
-    await downloadImageByList({
-      idList: map(skillId2AddonInfo, (v, k) => v?.icon || k),
-      dirPath: SKILL_IMG_DIR,
-      resPathGetter: id => `skill/skill_icon_${revIdStandardization(id)}.png`,
-      resize: 72,
-    });
+    const skilIdList = map(skillId2AddonInfo, (v, k) => v?.icon || k);
+    if (UPDATE_FROM_ARKNTOOLS) {
+      this.downloadConfig.set('skill', {
+        dir: SKILL_IMG_DIR,
+        resize: 72,
+        idList: skilIdList,
+        configGetter: id => ({ id, iconId: `skill_icon_${revIdStandardization(id)}` }),
+      });
+    } else {
+      await downloadImageByList({
+        idList: skilIdList,
+        dirPath: SKILL_IMG_DIR,
+        resPathGetter: id => `skill/skill_icon_${revIdStandardization(id)}.png`,
+        resize: 72,
+      });
+    }
   }
 
   private async updateBuildingInfo({ buildingData, characterTable }: GameData, locale: string) {
@@ -754,11 +805,20 @@ export class DataUpdater {
       writeData('building.json', { char: buildingChars, buff: buildingBuffs });
 
       // 下载图标
-      await downloadImageByList({
-        idList: map(buildingBuffs.data, 'icon'),
-        dirPath: BUILDING_SKILL_IMG_DIR,
-        resPathGetter: id => `building_skill/${id}.png`,
-      });
+      const buildingSkillIdList = map(buildingBuffs.data, 'icon');
+      if (UPDATE_FROM_ARKNTOOLS) {
+        this.downloadConfig.set('buildingSkill', {
+          dir: BUILDING_SKILL_IMG_DIR,
+          idList: buildingSkillIdList,
+          configGetter: id => ({ id, iconId: id }),
+        });
+      } else {
+        await downloadImageByList({
+          idList: buildingSkillIdList,
+          dirPath: BUILDING_SKILL_IMG_DIR,
+          resPathGetter: id => `building_skill/${id}.png`,
+        });
+      }
     }
 
     checkObjsNotEmpty(roomEnum2Name, buffId2Name, buffMd52Description);
@@ -770,7 +830,7 @@ export class DataUpdater {
       },
     });
 
-    if (isCN) {
+    if (isCN && !HAS_TW_DATA) {
       writeLocale('tw', 'building.json', {
         name: objS2twp(roomEnum2Name),
         buff: {
@@ -779,5 +839,28 @@ export class DataUpdater {
         },
       });
     }
+  }
+
+  private updateUniequipInfo({ uniequipTable }: GameData) {
+    const typeIconSet = new Set<string>();
+    const info = transform(
+      uniequipTable.equipDict,
+      (obj, { uniEquipId, typeIcon }) => {
+        if (typeIcon !== 'original') {
+          typeIcon = typeIcon.toLowerCase();
+          obj[uniEquipId] = { typeIcon };
+          typeIconSet.add(typeIcon);
+        }
+      },
+      {} as DataJsonUniequip,
+    );
+
+    writeData('uniequip.json', info);
+
+    this.downloadConfig.set('uniequip', {
+      dir: UNIEQUIP_IMG_DIR,
+      idList: Array.from(typeIconSet),
+      configGetter: id => ({ id, iconId: id }),
+    });
   }
 }

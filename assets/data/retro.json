@@ -142,6 +142,54 @@
         "act16side",
         "act16sre"
       ]
+    },
+    "permanent_sidestory_14_Lingering_Echoes": {
+      "type": 0,
+      "startTime": 1688414400,
+      "linkedActId": [
+        "act18side",
+        "act18sre"
+      ]
+    },
+    "permanent_sidestory_15_Dorothy_s_Vision": {
+      "type": 0,
+      "startTime": 1690833600,
+      "linkedActId": [
+        "act19side",
+        "act19sre"
+      ]
+    },
+    "permanent_sidestory_16_Summer_Carnival_City": {
+      "type": 0,
+      "startTime": 1694635200,
+      "linkedActId": [
+        "act20side",
+        "act20sre"
+      ]
+    },
+    "permanent_sidestory_17_Il_Siracusano": {
+      "type": 0,
+      "startTime": 1699128000,
+      "linkedActId": [
+        "act21side",
+        "act21sre"
+      ]
+    },
+    "permanent_sidestory_18_What_the_Firelight_Casts": {
+      "type": 0,
+      "startTime": 1704398400,
+      "linkedActId": [
+        "act22side",
+        "act22sre"
+      ]
+    },
+    "permanent_sidestory_19_Where_Vernal_Winds_Will_Never_Blow": {
+      "type": 0,
+      "startTime": 1706731200,
+      "linkedActId": [
+        "act23side",
+        "act23sre"
+      ]
     }
   },
   "us": {
@@ -174,6 +222,13 @@
       "startTime": 1669892400,
       "linkedActId": [
         "act17side"
+      ]
+    },
+    "permanent_sub_5_Lone_Trail": {
+      "type": 1,
+      "startTime": 1701774000,
+      "linkedActId": [
+        "act25side"
       ]
     },
     "permanent_sidestory_1_Grani_And_The_Treasure_Of_Knights": {
@@ -255,6 +310,46 @@
         "act13side",
         "act13sre"
       ]
+    },
+    "permanent_sidestory_11_Break_The_Ice": {
+      "type": 0,
+      "startTime": 1687863600,
+      "linkedActId": [
+        "act14side",
+        "act14sre"
+      ]
+    },
+    "permanent_sidestory_12_Invitation_To_Wine": {
+      "type": 0,
+      "startTime": 1692961200,
+      "linkedActId": [
+        "act15side",
+        "act15sre"
+      ]
+    },
+    "permanent_sidestory_13_Guiding_Ahead": {
+      "type": 0,
+      "startTime": 1696503600,
+      "linkedActId": [
+        "act15side",
+        "act16sre"
+      ]
+    },
+    "permanent_sidestory_14_Lingering_Echoes": {
+      "type": 0,
+      "startTime": 1705662000,
+      "linkedActId": [
+        "act18side",
+        "act18sre"
+      ]
+    },
+    "permanent_sidestory_16_Summer_Carnival_City": {
+      "type": 0,
+      "startTime": 1708426800,
+      "linkedActId": [
+        "act20side",
+        "act20sre"
+      ]
     }
   },
   "jp": {
@@ -287,6 +382,13 @@
       "startTime": 1669834800,
       "linkedActId": [
         "act17side"
+      ]
+    },
+    "permanent_sub_5_Lone_Trail": {
+      "type": 1,
+      "startTime": 1701716400,
+      "linkedActId": [
+        "act25side"
       ]
     },
     "permanent_sidestory_1_Grani_And_The_Treasure_Of_Knights": {
@@ -367,6 +469,46 @@
       "linkedActId": [
         "act13side",
         "act13sre"
+      ]
+    },
+    "permanent_sidestory_11_Break_The_Ice": {
+      "type": 0,
+      "startTime": 1687806000,
+      "linkedActId": [
+        "act14side",
+        "act14sre"
+      ]
+    },
+    "permanent_sidestory_12_Invitation_To_Wine": {
+      "type": 0,
+      "startTime": 1692903600,
+      "linkedActId": [
+        "act15side",
+        "act15sre"
+      ]
+    },
+    "permanent_sidestory_13_Guiding_Ahead": {
+      "type": 0,
+      "startTime": 1696446000,
+      "linkedActId": [
+        "act15side",
+        "act16sre"
+      ]
+    },
+    "permanent_sidestory_14_Lingering_Echoes": {
+      "type": 0,
+      "startTime": 1705604400,
+      "linkedActId": [
+        "act18side",
+        "act18sre"
+      ]
+    },
+    "permanent_sidestory_16_Summer_Carnival_City": {
+      "type": 0,
+      "startTime": 1708369200,
+      "linkedActId": [
+        "act20side",
+        "act20sre"
       ]
     }
   },
@@ -402,6 +544,13 @@
         "act17side"
       ]
     },
+    "permanent_sub_5_Lone_Trail": {
+      "type": 1,
+      "startTime": 1701716400,
+      "linkedActId": [
+        "act25side"
+      ]
+    },
     "permanent_sidestory_1_Grani_And_The_Treasure_Of_Knights": {
       "type": 0,
       "startTime": 1632967200,
@@ -480,6 +629,183 @@
       "linkedActId": [
         "act13side",
         "act13sre"
+      ]
+    },
+    "permanent_sidestory_11_Break_The_Ice": {
+      "type": 0,
+      "startTime": 1687806000,
+      "linkedActId": [
+        "act14side",
+        "act14sre"
+      ]
+    },
+    "permanent_sidestory_12_Invitation_To_Wine": {
+      "type": 0,
+      "startTime": 1692903600,
+      "linkedActId": [
+        "act15side",
+        "act15sre"
+      ]
+    },
+    "permanent_sidestory_13_Guiding_Ahead": {
+      "type": 0,
+      "startTime": 1696446000,
+      "linkedActId": [
+        "act15side",
+        "act16sre"
+      ]
+    },
+    "permanent_sidestory_14_Lingering_Echoes": {
+      "type": 0,
+      "startTime": 1705604400,
+      "linkedActId": [
+        "act18side",
+        "act18sre"
+      ]
+    },
+    "permanent_sidestory_16_Summer_Carnival_City": {
+      "type": 0,
+      "startTime": 1708369200,
+      "linkedActId": [
+        "act20side",
+        "act20sre"
+      ]
+    }
+  },
+  "tw": {
+    "permanent_sub_1_Darknights_Memoir": {
+      "type": 1,
+      "startTime": 1641844800,
+      "linkedActId": [
+        "act9d0",
+        "act17d5"
+      ]
+    },
+    "permanent_sub_2_A_Walk_In_The_Dust": {
+      "type": 1,
+      "startTime": 1643659200,
+      "linkedActId": [
+        "act18d0",
+        "act10sre"
+      ]
+    },
+    "permanent_sub_3_Under_Tides": {
+      "type": 1,
+      "startTime": 1644955200,
+      "linkedActId": [
+        "act18d3",
+        "act11sre"
+      ]
+    },
+    "permanent_sub_4_Stultifera_Navis": {
+      "type": 1,
+      "startTime": 1677528000,
+      "linkedActId": [
+        "act17side"
+      ]
+    },
+    "permanent_sidestory_1_Grani_And_The_Treasure_Of_Knights": {
+      "type": 0,
+      "startTime": 1641844800,
+      "linkedActId": [
+        "1stact",
+        "act13d2"
+      ]
+    },
+    "permanent_sidestory_2_Heart_Of_Surging_Flame": {
+      "type": 0,
+      "startTime": 1641844800,
+      "linkedActId": [
+        "act3d0",
+        "act11d7"
+      ]
+    },
+    "permanent_sidestory_3_Code_Of_Brawl": {
+      "type": 0,
+      "startTime": 1641844800,
+      "linkedActId": [
+        "act5d0",
+        "act14d7"
+      ]
+    },
+    "permanent_sidestory_4_Twilight_Of_Wolumonde": {
+      "type": 0,
+      "startTime": 1649102400,
+      "linkedActId": [
+        "act11d0",
+        "act5sre"
+      ]
+    },
+    "permanent_sidestory_5_The_Great_Chief_Returns": {
+      "type": 0,
+      "startTime": 1652126400,
+      "linkedActId": [
+        "act12d0",
+        "act6sre"
+      ]
+    },
+    "permanent_sidestory_6_Maria_Nearl": {
+      "type": 0,
+      "startTime": 1658260800,
+      "linkedActId": [
+        "act13d5",
+        "act7sre"
+      ]
+    },
+    "permanent_sidestory_7_Mansfield_Break": {
+      "type": 0,
+      "startTime": 1664308800,
+      "linkedActId": [
+        "act15d0",
+        "act8sre"
+      ]
+    },
+    "permanent_sidestory_8_Who_is_Real": {
+      "type": 0,
+      "startTime": 1666814400,
+      "linkedActId": [
+        "act16d5",
+        "act9sre"
+      ]
+    },
+    "permanent_sidestory_9_Dossoles_Holiday": {
+      "type": 0,
+      "startTime": 1684353600,
+      "linkedActId": [
+        "act12side",
+        "act12sre"
+      ]
+    },
+    "permanent_sidestory_10_Near_Light": {
+      "type": 0,
+      "startTime": 1686600000,
+      "linkedActId": [
+        "act13side",
+        "act13sre"
+      ]
+    },
+    "permanent_sidestory_11_Break_The_Ice": {
+      "type": 0,
+      "startTime": 1694462400,
+      "linkedActId": [
+        "act14side",
+        "act14sre"
+      ]
+    },
+    "permanent_sidestory_12_Invitation_To_Wine": {
+      "type": 0,
+      "startTime": 1700078400,
+      "linkedActId": [
+        "act15side",
+        "act15sre"
+      ]
+    },
+    "permanent_sidestory_13_Guiding_Ahead": {
+      "type": 0,
+      "startTime": 1707163200,
+      "linkedActId": [
+        "act15side",
+        "act16sre"
       ]
     }
   }

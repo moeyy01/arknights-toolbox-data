@@ -4,12 +4,19 @@ const IMG_DIR = resolve(__dirname, '../../assets/img');
 export const DATA_DIR = resolve(__dirname, '../../assets/data');
 export const LOCALES_DIR = resolve(__dirname, '../../assets/locales');
 export const OTHER_DATA_DIR = resolve(__dirname, '../../others');
+export const GAME_DATA_DIR = resolve(__dirname, '../../data');
 
 export const AVATAR_IMG_DIR = resolve(IMG_DIR, 'avatar');
 export const SKILL_IMG_DIR = resolve(IMG_DIR, 'skill');
 export const BUILDING_SKILL_IMG_DIR = resolve(IMG_DIR, 'building_skill');
 export const ITEM_IMG_DIR = resolve(IMG_DIR, 'item');
 export const ITEM_PKG_ZIP = resolve(__dirname, '../../assets/pkg/item.zip');
+export const UNIEQUIP_IMG_DIR = resolve(IMG_DIR, 'uniequip');
+
+export const UPDATE_SOURCE = process.env.UPDATE_SOURCE;
+export const UPDATE_FROM_YUANYAN = UPDATE_SOURCE === 'yuanyan';
+export const UPDATE_FROM_ARKNTOOLS = UPDATE_SOURCE === 'arkntools';
+export const HAS_TW_DATA = UPDATE_FROM_YUANYAN || UPDATE_FROM_ARKNTOOLS;
 
 export const PURCHASE_CERTIFICATE_ID = '4006';
 export const CHIP_ASSISTANT_ID = '32001';
@@ -25,6 +32,8 @@ export const LangMap: Record<string, string> = {
   jp: 'ja_JP',
   kr: 'ko_KR',
 };
+
+if (HAS_TW_DATA) LangMap.tw = 'zh_TW';
 
 /** 备用替换 */
 export const GameDataReplaceMap: Record<string, string[] | undefined> = {

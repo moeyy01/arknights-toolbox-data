@@ -1,5 +1,6 @@
-{ 
-  "routes": [
+{
+    "version": 2,
+    "routes": [
     {
       "src": "/arknights-toolbox/(.*)",
       "dest": "https://statics.arkn.lolicon.app/arknights-toolbox/$1"
@@ -9,5 +10,5 @@
       "status": 302,
       "headers": { "Location":"https://moeyy.cn/arknights/" }
     }
-  ]
+    ]
 }

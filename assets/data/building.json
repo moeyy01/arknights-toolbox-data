@@ -2941,6 +2941,378 @@
         "id": "train_spd&profession2_630",
         "unlock": "2_1"
       }
+    ],
+    "4093_frston": [
+      {
+        "id": "power_rec_spd_000",
+        "unlock": "0_1"
+      },
+      {
+        "id": "power_rec_spd_P_000",
+        "unlock": "0_30"
+      }
+    ],
+    "1032_excu2": [
+      {
+        "id": "manu_formula_spd_030",
+        "unlock": "0_1"
+      },
+      {
+        "id": "manu_formula_spd_031",
+        "unlock": "2_1"
+      },
+      {
+        "id": "manu_formula_limit_020",
+        "unlock": "2_1"
+      }
+    ],
+    "4015_spuria": [
+      {
+        "id": "power_rec_spd&addition_000",
+        "unlock": "0_1"
+      },
+      {
+        "id": "power_rec_spd&addition_001",
+        "unlock": "2_1"
+      },
+      {
+        "id": "power_rec_spd&cost_010",
+        "unlock": "0_1"
+      }
+    ],
+    "498_inside": [
+      {
+        "id": "hire_spd&clue_110",
+        "unlock": "0_1"
+      },
+      {
+        "id": "dorm_rec_single&oneself_040",
+        "unlock": "2_1"
+      }
+    ],
+    "2012_typhon": [
+      {
+        "id": "meet_spd&sami_000",
+        "unlock": "0_1"
+      },
+      {
+        "id": "train_spd&profession3_170",
+        "unlock": "2_1"
+      }
+    ],
+    "341_sntlla": [
+      {
+        "id": "dorm_rec_single_power_000",
+        "unlock": "0_1"
+      },
+      {
+        "id": "train_spd_power_000",
+        "unlock": "2_1"
+      }
+    ],
+    "4102_threye": [
+      {
+        "id": "meet_spd&bd_000",
+        "unlock": "0_1"
+      },
+      {
+        "id": "meet_spd&bd_010",
+        "unlock": "2_1"
+      }
+    ],
+    "4106_bryota": [
+      {
+        "id": "manu_formula_spd_100",
+        "unlock": "0_1"
+      },
+      {
+        "id": "manu_skill_spd1_020",
+        "unlock": "2_1"
+      }
+    ],
+    "1033_swire2": [
+      {
+        "id": "trade_ord_spd_000",
+        "unlock": "0_1"
+      },
+      {
+        "id": "trade_ord_spd_variable_000",
+        "unlock": "2_1"
+      }
+    ],
+    "488_buildr": [
+      {
+        "id": "workshop_formula_probability_221",
+        "unlock": "0_1"
+      },
+      {
+        "id": "workshop_formula_cost3_221",
+        "unlock": "2_1"
+      }
+    ],
+    "1016_agoat2": [
+      {
+        "id": "train_spd&profession3_180",
+        "unlock": "0_1"
+      },
+      {
+        "id": "train_spd&profession3_181",
+        "unlock": "2_1"
+      },
+      {
+        "id": "dorm_rec_all&profession_000",
+        "unlock": "2_1"
+      }
+    ],
+    "1034_jesca2": [
+      {
+        "id": "trade_ord_spd&limit_001",
+        "unlock": "0_1"
+      },
+      {
+        "id": "control_bd_spd_000",
+        "unlock": "2_1"
+      }
+    ],
+    "4105_almond": [
+      {
+        "id": "manu_formula_spd&cost_000",
+        "unlock": "0_1"
+      },
+      {
+        "id": "manu_formula_spd&cost_bd_000",
+        "unlock": "2_1"
+      }
+    ],
+    "4104_coldst": [
+      {
+        "id": "control_mp_cost_009",
+        "unlock": "0_1"
+      },
+      {
+        "id": "dorm_rec_all&single_000",
+        "unlock": "2_1"
+      }
+    ],
+    "4088_hodrer": [
+      {
+        "id": "trade_ord_par&per_000",
+        "unlock": "0_1"
+      },
+      {
+        "id": "trade_ord_par&per_001",
+        "unlock": "2_1"
+      }
+    ],
+    "4110_delphn": [
+      {
+        "id": "hire_spd&clue2_260",
+        "unlock": "0_1"
+      },
+      {
+        "id": "control_tra_limit&spd_010",
+        "unlock": "2_1"
+      }
+    ],
+    "494_vendla": [
+      {
+        "id": "dorm_rec_all_023",
+        "unlock": "0_1"
+      },
+      {
+        "id": "dorm_rec_all&tired_000",
+        "unlock": "2_1"
+      }
+    ],
+    "4107_vrdant": [
+      {
+        "id": "workshop_formula_cost3_101",
+        "unlock": "0_1"
+      },
+      {
+        "id": "workshop_formula_device_060",
+        "unlock": "1_1"
+      }
+    ],
+    "245_cello": [
+      {
+        "id": "dorm_bd_num_000",
+        "unlock": "0_1"
+      },
+      {
+        "id": "dorm_rec_all&bd_000",
+        "unlock": "2_1"
+      }
+    ],
+    "4098_vvana": [
+      {
+        "id": "control_mp_cost_010",
+        "unlock": "0_1"
+      },
+      {
+        "id": "control_prod_fraction_000",
+        "unlock": "2_1"
+      }
+    ],
+    "4011_lessng": [
+      {
+        "id": "workshop_formula_cost4_010",
+        "unlock": "0_1"
+      },
+      {
+        "id": "workshop_formula_cost4_011",
+        "unlock": "2_1"
+      },
+      {
+        "id": "workshop_formula_probability_139",
+        "unlock": "2_1"
+      }
+    ],
+    "499_kaitou": [
+      {
+        "id": "trade_ord_wt&cost_002",
+        "unlock": "0_1"
+      },
+      {
+        "id": "trade_ord_wt&cost_012",
+        "unlock": "2_1"
+      }
+    ],
+    "4109_baslin": [
+      {
+        "id": "hire_spd_cost_101",
+        "unlock": "0_1"
+      },
+      {
+        "id": "hire_spd_cost_120",
+        "unlock": "2_1"
+      },
+      {
+        "id": "hire_spd_bd_n1_n1_300",
+        "unlock": "2_1"
+      }
+    ],
+    "4100_caper": [
+      {
+        "id": "meet_spd&team_000",
+        "unlock": "0_1"
+      },
+      {
+        "id": "meet_spd&exchange_000",
+        "unlock": "1_1"
+      }
+    ],
+    "4116_blkkgt": [
+      {
+        "id": "trade_ord_spd&limit_100",
+        "unlock": "0_1"
+      },
+      {
+        "id": "trade_ord_spd&limit_101",
+        "unlock": "2_1"
+      },
+      {
+        "id": "trade_ord_spd_variable3_000",
+        "unlock": "2_1"
+      }
+    ],
+    "194_leto": [
+      {
+        "id": "train_spd&profession_020",
+        "unlock": "0_1"
+      },
+      {
+        "id": "manu_formula_spd_P_000",
+        "unlock": "2_1"
+      }
+    ],
+    "4114_harold": [
+      {
+        "id": "meet_spd_000",
+        "unlock": "0_1"
+      },
+      {
+        "id": "meet_team&char_000",
+        "unlock": "2_1"
+      }
+    ],
+    "4117_ray": [
+      {
+        "id": "workshop_formula_probability_116",
+        "unlock": "0_1"
+      },
+      {
+        "id": "workshop_formula_probability_126",
+        "unlock": "2_1"
+      },
+      {
+        "id": "workshop_formula_drop_040",
+        "unlock": "2_1"
+      }
+    ],
+    "4081_warmy": [
+      {
+        "id": "dorm_rec_all_014",
+        "unlock": "0_1"
+      },
+      {
+        "id": "dorm_rec_all_024",
+        "unlock": "2_1"
+      },
+      {
+        "id": "manu_formula_spd_101",
+        "unlock": "2_1"
+      }
+    ],
+    "2025_shu": [
+      {
+        "id": "manu_cost_000",
+        "unlock": "0_1"
+      },
+      {
+        "id": "manu_prod_spd_bd_300",
+        "unlock": "2_1"
+      }
+    ],
+    "4121_zuole": [
+      {
+        "id": "train_spd_001",
+        "unlock": "0_1"
+      },
+      {
+        "id": "train_spd_bd&reduceTime_000",
+        "unlock": "2_1"
+      }
+    ],
+    "4122_grabds": [
+      {
+        "id": "dorm_rec_single_1010",
+        "unlock": "0_1"
+      },
+      {
+        "id": "dorm_rec_all_025",
+        "unlock": "2_1"
+      }
+    ],
+    "4119_wanqin": [
+      {
+        "id": "workshop_proc_probability_032",
+        "unlock": "0_1"
+      },
+      {
+        "id": "workshop_formula_cost3_400",
+        "unlock": "2_1"
+      }
+    ],
+    "4023_rfalcn": [
+      {
+        "id": "control_dorm_rec_001",
+        "unlock": "0_1"
+      },
+      {
+        "id": "control_mp_cost_011",
+        "unlock": "2_1"
+      }
     ]
   },
   "buff": {
@@ -2948,6 +3320,10 @@
       "control_prod_spd_000": {
         "icon": "bskill_ctrl_p_spd",
         "desc": "8de4"
+      },
+      "control_prod_fraction_000": {
+        "icon": "bskill_ctrl_fraction_knight",
+        "desc": "94d7"
       },
       "control_token_prod_spd_000": {
         "icon": "bskill_ctrl_token_p_spd",
@@ -2960,6 +3336,10 @@
       "control_token_tra_spd_000": {
         "icon": "bskill_ctrl_token_t_spd",
         "desc": "4d3f"
+      },
+      "control_bd_spd_000": {
+        "icon": "bskill_ctrl_bd_spd",
+        "desc": "54b5"
       },
       "control_pow_bot_000": {
         "icon": "bskill_ctrl_p_bot",
@@ -3038,6 +3418,18 @@
         "desc": "8da9"
       },
       "control_mp_cost_008": {
+        "icon": "bskill_ctrl_cost",
+        "desc": "8da9"
+      },
+      "control_mp_cost_009": {
+        "icon": "bskill_ctrl_cost",
+        "desc": "8da9"
+      },
+      "control_mp_cost_010": {
+        "icon": "bskill_ctrl_cost",
+        "desc": "8da9"
+      },
+      "control_mp_cost_011": {
         "icon": "bskill_ctrl_cost",
         "desc": "8da9"
       },
@@ -3133,9 +3525,21 @@
         "icon": "bskill_ctrl_leader",
         "desc": "5636"
       },
+      "control_dorm_rec_001": {
+        "icon": "bskill_ctrl_leader",
+        "desc": "5636"
+      },
+      "control_tra_limit&spd_010": {
+        "icon": "bskill_ctrl_g_limit&spd",
+        "desc": "779b"
+      },
       "power_rec_spd&cost_000": {
         "icon": "bskill_pow_spd&cost",
         "desc": "f025"
+      },
+      "power_rec_spd&cost_010": {
+        "icon": "bskill_pow_spd&cost",
+        "desc": "c79a"
       },
       "power_rec_spd_000": {
         "icon": "bskill_pow_spd1",
@@ -3209,9 +3613,21 @@
         "icon": "bskill_pow_jnight",
         "desc": "409c"
       },
+      "power_rec_spd_P_000": {
+        "icon": "bskill_pow_spd_P",
+        "desc": "60a0"
+      },
       "power_rec_rhine_000": {
         "icon": "bskill_power_rec_rhine",
         "desc": "f054"
+      },
+      "power_rec_spd&addition_000": {
+        "icon": "bskill_power_rec_spd&addition1",
+        "desc": "32fe"
+      },
+      "power_rec_spd&addition_001": {
+        "icon": "bskill_power_rec_spd&addition2",
+        "desc": "64b7"
       },
       "manu_bd_to_bd_000": {
         "icon": "bskill_man_bd1",
@@ -3272,6 +3688,10 @@
       "manu_skill_spd1_010": {
         "icon": "bskill_man_skill_spd2",
         "desc": "3ff4"
+      },
+      "manu_skill_spd1_020": {
+        "icon": "bskill_man_skill_spd3",
+        "desc": "4e6d"
       },
       "manu_skill_change_000": {
         "icon": "bskill_man_skill_change",
@@ -3353,6 +3773,10 @@
         "icon": "bskill_man_exp&limit2",
         "desc": "b8db"
       },
+      "manu_formula_limit_020": {
+        "icon": "bskill_man_exp&limit3",
+        "desc": "d88c"
+      },
       "manu_prod_spd&limit&cost_000": {
         "icon": "bskill_man_spd&limit&cost1",
         "desc": "686b"
@@ -3421,6 +3845,10 @@
         "icon": "bskill_man_spd_bd6",
         "desc": "aa85"
       },
+      "manu_prod_spd_bd_300": {
+        "icon": "bskill_man_spd_bd7",
+        "desc": "6aef"
+      },
       "manu_formula_spd_000": {
         "icon": "bskill_man_exp1",
         "desc": "c3d0"
@@ -3433,6 +3861,14 @@
         "icon": "bskill_man_exp3",
         "desc": "66c7"
       },
+      "manu_formula_spd_030": {
+        "icon": "bskill_man_exp4",
+        "desc": "82d0"
+      },
+      "manu_formula_spd_031": {
+        "icon": "bskill_man_exp2",
+        "desc": "6f3f"
+      },
       "manu_prod_spd&trade_000": {
         "icon": "bskill_man_spd&trade",
         "desc": "a9d8"
@@ -3444,6 +3880,18 @@
       "manu_formula_spd_110": {
         "icon": "bskill_man_gold2",
         "desc": "6141"
+      },
+      "manu_formula_spd_101": {
+        "icon": "bskill_man_gold1",
+        "desc": "9628"
+      },
+      "manu_formula_spd&cost_000": {
+        "icon": "bskill_man_gold3",
+        "desc": "ef5e"
+      },
+      "manu_formula_spd&cost_bd_000": {
+        "icon": "bskill_man_gold&blacksteel",
+        "desc": "c713"
       },
       "manu_formula_spd_200": {
         "icon": "bskill_man_originium1",
@@ -3469,9 +3917,17 @@
         "icon": "bskill_man_originium2",
         "desc": "a5bc"
       },
+      "manu_formula_spd_P_000": {
+        "icon": "bskill_formula_spd_sunbr",
+        "desc": "319e"
+      },
       "manu_cost_all_000": {
         "icon": "bskill_man_cost_all",
         "desc": "d520"
+      },
+      "manu_cost_000": {
+        "icon": "bskill_man_cost_room1",
+        "desc": "caee"
       },
       "trade_cost_000": {
         "icon": "bskill_tra_cost1",
@@ -3513,6 +3969,10 @@
         "icon": "bskill_tra_vodfox",
         "desc": "5a16"
       },
+      "trade_ord_spd_variable_000": {
+        "icon": "bskill_trade_ord_spd_variable",
+        "desc": "701a"
+      },
       "trade_ord_spd_variable2_000": {
         "icon": "bskill_tra_spd_variable21",
         "desc": "f020"
@@ -3520,6 +3980,10 @@
       "trade_ord_spd_variable2_001": {
         "icon": "bskill_tra_spd_variable22",
         "desc": "02df"
+      },
+      "trade_ord_spd_variable3_000": {
+        "icon": "bskill_tra_limit2spd",
+        "desc": "0479"
       },
       "trade_ord_spd&dorm&lv_000": {
         "icon": "bskill_tra_spd&dorm1",
@@ -3601,6 +4065,14 @@
         "icon": "bskill_tra_spd&limit7",
         "desc": "9e5b"
       },
+      "trade_ord_spd&limit_100": {
+        "icon": "bskill_tra_spd&limit_down1",
+        "desc": "a4d1"
+      },
+      "trade_ord_spd&limit_101": {
+        "icon": "bskill_tra_spd&limit_down2",
+        "desc": "2dac"
+      },
       "trade_ord_spd&cost_000": {
         "icon": "bskill_tra_spd&cost",
         "desc": "a027"
@@ -3646,6 +4118,14 @@
         "desc": "b37f"
       },
       "trade_ord_wt&cost_011": {
+        "icon": "bskill_tra_wt&cost2",
+        "desc": "56bc"
+      },
+      "trade_ord_wt&cost_002": {
+        "icon": "bskill_tra_wt&cost1",
+        "desc": "b37f"
+      },
+      "trade_ord_wt&cost_012": {
         "icon": "bskill_tra_wt&cost2",
         "desc": "56bc"
       },
@@ -3701,6 +4181,14 @@
         "icon": "bskill_tra_par1",
         "desc": "edee"
       },
+      "trade_ord_par&per_000": {
+        "icon": "bskill_tra_par&per1",
+        "desc": "558b"
+      },
+      "trade_ord_par&per_001": {
+        "icon": "bskill_tra_par&per2",
+        "desc": "273e"
+      },
       "workshop_proc_probability_000": {
         "icon": "bskill_ws_p1",
         "desc": "2902"
@@ -3737,6 +4225,10 @@
         "icon": "bskill_ws_p4",
         "desc": "cc89"
       },
+      "workshop_proc_probability_032": {
+        "icon": "bskill_ws_p4",
+        "desc": "cc89"
+      },
       "workshop_proc_probability_040": {
         "icon": "bskill_ws_p5",
         "desc": "6324"
@@ -3760,6 +4252,10 @@
       "workshop_formula_cost_000": {
         "icon": "bskill_ws_cost_magallan",
         "desc": "c237"
+      },
+      "workshop_formula_cost3_400": {
+        "icon": "bskill_ws_all_cost1",
+        "desc": "8420"
       },
       "workshop_formula_recovery_000": {
         "icon": "bskill_ws_recovery",
@@ -3805,6 +4301,10 @@
         "icon": "bskill_ws_build_cost2",
         "desc": "6060"
       },
+      "workshop_formula_cost3_221": {
+        "icon": "bskill_ws_build_cost2",
+        "desc": "6060"
+      },
       "workshop_formula_cost3_200": {
         "icon": "bskill_ws_build_cost",
         "desc": "3a5d"
@@ -3816,6 +4316,18 @@
       "workshop_formula_cost3_000": {
         "icon": "bskill_ws_skill_cost1",
         "desc": "e969"
+      },
+      "workshop_formula_cost3_101": {
+        "icon": "bskill_ws_evolve_cost",
+        "desc": "e85a"
+      },
+      "workshop_formula_cost4_010": {
+        "icon": "bskill_ws_constant2",
+        "desc": "bf0b"
+      },
+      "workshop_formula_cost4_011": {
+        "icon": "bskill_ws_constant3",
+        "desc": "2566"
       },
       "workshop_formula_cost&dorm_000": {
         "icon": "bskill_ws_cost&dorm",
@@ -3854,6 +4366,10 @@
         "desc": "a272"
       },
       "workshop_formula_probability_129": {
+        "icon": "bskill_ws_evolve3",
+        "desc": "579e"
+      },
+      "workshop_formula_probability_139": {
         "icon": "bskill_ws_evolve3",
         "desc": "579e"
       },
@@ -3901,6 +4417,18 @@
         "icon": "bskill_ws_evolve4",
         "desc": "51ec"
       },
+      "workshop_formula_probability_221": {
+        "icon": "bskill_ws_build2",
+        "desc": "7d56"
+      },
+      "workshop_formula_probability_116": {
+        "icon": "bskill_ws_evolve2",
+        "desc": "a272"
+      },
+      "workshop_formula_probability_126": {
+        "icon": "bskill_ws_evolve3",
+        "desc": "579e"
+      },
       "workshop_formula_dorm_000": {
         "icon": "bskill_ws_evolve_dorm1",
         "desc": "2689"
@@ -3920,6 +4448,10 @@
       "workshop_formula_drop_030": {
         "icon": "bskill_ws_drop_oriron",
         "desc": "70f6"
+      },
+      "workshop_formula_drop_040": {
+        "icon": "bskill_ws_drop_orirock",
+        "desc": "5226"
       },
       "workshop_formula_free_000": {
         "icon": "bskill_ws_free",
@@ -3965,9 +4497,17 @@
         "icon": "bskill_ws_alloyBlock",
         "desc": "e58c"
       },
+      "workshop_formula_device_060": {
+        "icon": "bskill_ws_Ketone",
+        "desc": "6b8e"
+      },
       "workshop_formula_rub_000": {
         "icon": "bskill_ws_rub",
         "desc": "7cd2"
+      },
+      "train_spd_001": {
+        "icon": "bskill_train_all",
+        "desc": "2abe"
       },
       "train_spd_000": {
         "icon": "bskill_train_all",
@@ -3976,6 +4516,10 @@
       "train_spd_0000": {
         "icon": "bskill_train_all",
         "desc": "2abe"
+      },
+      "train_spd_power_000": {
+        "icon": "bskill_train_sami",
+        "desc": "f078"
       },
       "train_spd_tag_000": {
         "icon": "bskill_train_knight_bd1",
@@ -4008,6 +4552,10 @@
       "train_spd_reduceTime_000": {
         "icon": "bskill_train_reduceTime",
         "desc": "192e"
+      },
+      "train_spd_bd&reduceTime_000": {
+        "icon": "bskill_train_accmu_guard1",
+        "desc": "7d1c"
       },
       "train_spd&profession_010": {
         "icon": "bskill_train_vanguard1",
@@ -4161,6 +4709,18 @@
         "icon": "bskill_train_lord",
         "desc": "53c1"
       },
+      "train_spd&profession3_170": {
+        "icon": "bskill_train_siegesniper",
+        "desc": "b515"
+      },
+      "train_spd&profession3_180": {
+        "icon": "bskill_train_medic1",
+        "desc": "3990"
+      },
+      "train_spd&profession3_181": {
+        "icon": "bskill_train_wandermedic",
+        "desc": "7745"
+      },
       "train_spd&profession2_110": {
         "icon": "bskill_train1_vanguard1",
         "desc": "9faa"
@@ -4281,6 +4841,10 @@
         "icon": "bskill_dorm_single1",
         "desc": "3742"
       },
+      "dorm_rec_single_1010": {
+        "icon": "bskill_dorm_single1",
+        "desc": "3742"
+      },
       "dorm_rec_single_000": {
         "icon": "bskill_dorm_single2",
         "desc": "8fb9"
@@ -4319,7 +4883,7 @@
       },
       "dorm_rec_single_P_001": {
         "icon": "bskill_dorm_single_tomimi",
-        "desc": "ed35"
+        "desc": "ea1e"
       },
       "dorm_rec_single_P_002": {
         "icon": "bskill_dorm_single_indigo",
@@ -4353,6 +4917,10 @@
         "icon": "bskill_dorm_all2",
         "desc": "a2d2"
       },
+      "dorm_rec_all_014": {
+        "icon": "bskill_dorm_all2",
+        "desc": "a2d2"
+      },
       "dorm_rec_all_020": {
         "icon": "bskill_dorm_all3",
         "desc": "cd6e"
@@ -4364,6 +4932,10 @@
       "dorm_rec_all_022": {
         "icon": "bskill_dorm_all3",
         "desc": "cd6e"
+      },
+      "dorm_rec_all&single_000": {
+        "icon": "bskill_dorm_all&single",
+        "desc": "fa08"
       },
       "dorm_powToRecAll_000": {
         "icon": "bskill_dorm_powToRecAll1",
@@ -4409,6 +4981,14 @@
         "icon": "bskill_dorm_single&one22",
         "desc": "98df"
       },
+      "dorm_rec_single&oneself_040": {
+        "icon": "bskill_dorm_single&one12",
+        "desc": "720f"
+      },
+      "dorm_rec_single_power_000": {
+        "icon": "bskill_dorm_single_sami",
+        "desc": "c1b3"
+      },
       "dorm_rec_all&oneself_000": {
         "icon": "bskill_dorm_all&one1",
         "desc": "355a"
@@ -4441,6 +5021,10 @@
         "icon": "bskill_dorm_all&one3",
         "desc": "548c"
       },
+      "dorm_rec_all&profession_000": {
+        "icon": "bskill_dorm_rec_all&profession",
+        "desc": "3b66"
+      },
       "dorm_exchangeAp_000": {
         "icon": "bskill_dorm_exchangeAp",
         "desc": "f505"
@@ -4452,6 +5036,30 @@
       "dorm_rec_toone_000": {
         "icon": "bskill_dorm_toone1",
         "desc": "105f"
+      },
+      "dorm_rec_all_023": {
+        "icon": "bskill_dorm_all4",
+        "desc": "a2d2"
+      },
+      "dorm_rec_all_024": {
+        "icon": "bskill_dorm_all3",
+        "desc": "cd6e"
+      },
+      "dorm_rec_all_025": {
+        "icon": "bskill_dorm_all2",
+        "desc": "a2d2"
+      },
+      "dorm_bd_num_000": {
+        "icon": "bskill_dorm_bdnum",
+        "desc": "16ec"
+      },
+      "dorm_rec_all&bd_000": {
+        "icon": "bskill_dorm_rec_allbd",
+        "desc": "8bed"
+      },
+      "dorm_rec_all&tired_000": {
+        "icon": "bskill_dorm_all_tired",
+        "desc": "70a7"
       },
       "hire_spd_000": {
         "icon": "bskill_hire_spd1",
@@ -4509,6 +5117,14 @@
         "icon": "bskill_hire_spd&cost4",
         "desc": "6693"
       },
+      "hire_spd_cost_101": {
+        "icon": "bskill_hire_spd&cost5",
+        "desc": "dbfb"
+      },
+      "hire_spd_cost_120": {
+        "icon": "bskill_hire_spd&cost6",
+        "desc": "5dee"
+      },
       "hire_spd_cost&clue_001": {
         "icon": "bskill_hire_spd2",
         "desc": "a432"
@@ -4533,6 +5149,10 @@
         "icon": "bskill_hire_spd&clue",
         "desc": "7ad9"
       },
+      "hire_spd&clue_110": {
+        "icon": "bskill_hire_spd&clue2",
+        "desc": "9d7c"
+      },
       "hire_spd&clue2_230": {
         "icon": "bskill_hire_spd&blacksteel2",
         "desc": "7a04"
@@ -4553,9 +5173,17 @@
         "icon": "bskill_hire_spd_bd_n2",
         "desc": "726d"
       },
+      "hire_spd_bd_n1_n1_300": {
+        "icon": "bskill_hire_bd_B",
+        "desc": "ed7f"
+      },
       "hire_spd_blitz_000": {
         "icon": "bskill_hire_blitz",
         "desc": "7a39"
+      },
+      "hire_spd&clue2_260": {
+        "icon": "bskill_hire_spd&glasgow",
+        "desc": "d3fa"
       },
       "meet_spd_000": {
         "icon": "bskill_meet_spd1",
@@ -4589,6 +5217,18 @@
         "icon": "bskill_meet_spd3",
         "desc": "80b9"
       },
+      "meet_spd&sami_000": {
+        "icon": "bskill_meet_spd&sami",
+        "desc": "6d79"
+      },
+      "meet_spd&bd_000": {
+        "icon": "bskill_meet_spd&bd",
+        "desc": "5b6b"
+      },
+      "meet_spd&bd_010": {
+        "icon": "bskill_meet_spd&bd&notOwned",
+        "desc": "717c"
+      },
       "meet_spd_condChar_000": {
         "icon": "bskill_meet_condChar",
         "desc": "fd91"
@@ -4609,6 +5249,10 @@
         "icon": "bskill_meet_spd&cost_condChar3",
         "desc": "8a17"
       },
+      "meet_spd&exchange_000": {
+        "icon": "bskill_meet_exchange",
+        "desc": "952b"
+      },
       "meet_team_020": {
         "icon": "bskill_meet_penguin1",
         "desc": "4617"
@@ -4624,6 +5268,10 @@
       "meet_team_070": {
         "icon": "bskill_meet_glasgow1",
         "desc": "5929"
+      },
+      "meet_team&char_000": {
+        "icon": "bskil_meet_team&char",
+        "desc": "779f"
       },
       "meet_flag_010": {
         "icon": "bskill_meet_flag_rhine",
@@ -4733,6 +5381,11 @@
         }
       },
       "2477": {
+        "building": "WORKSHOP",
+        "num": {},
+        "is": {}
+      },
+      "2566": {
         "building": "WORKSHOP",
         "num": {},
         "is": {}
@@ -4874,6 +5527,11 @@
         "is": {
           "辅助": 1
         }
+      },
+      "5226": {
+        "building": "WORKSHOP",
+        "num": {},
+        "is": {}
       },
       "5402": {
         "building": "TRAINING",
@@ -5048,6 +5706,15 @@
           "任意材料": 1
         }
       },
+      "7745": {
+        "building": "TRAINING",
+        "num": {
+          "train": 30
+        },
+        "is": {
+          "医疗": 1
+        }
+      },
       "7799": {
         "building": "CONTROL",
         "num": {
@@ -5059,6 +5726,11 @@
       },
       "8174": {
         "building": "CONTROL",
+        "num": {},
+        "is": {}
+      },
+      "8420": {
+        "building": "WORKSHOP",
         "num": {},
         "is": {}
       },
@@ -5114,6 +5786,11 @@
           "生产力": 1
         }
       },
+      "94d7": {
+        "building": "CONTROL",
+        "num": {},
+        "is": {}
+      },
       "0962": {
         "building": "CONTROL",
         "num": {
@@ -5131,6 +5808,11 @@
         "is": {
           "订单效率": 1
         }
+      },
+      "54b5": {
+        "building": "CONTROL",
+        "num": {},
+        "is": {}
       },
       "1b45": {
         "building": "CONTROL",
@@ -5303,7 +5985,21 @@
           "心情消耗": 1
         }
       },
+      "779b": {
+        "building": "CONTROL",
+        "num": {
+          "orderAll": 10
+        },
+        "is": {
+          "订单效率": 1
+        }
+      },
       "f025": {
+        "building": "POWER",
+        "num": {},
+        "is": {}
+      },
+      "c79a": {
         "building": "POWER",
         "num": {},
         "is": {}
@@ -5346,10 +6042,31 @@
         "num": {},
         "is": {}
       },
+      "60a0": {
+        "building": "POWER",
+        "num": {
+          "power": 5
+        },
+        "is": {}
+      },
       "f054": {
         "building": "POWER",
         "num": {
           "power": 10
+        },
+        "is": {}
+      },
+      "32fe": {
+        "building": "POWER",
+        "num": {
+          "power": 10
+        },
+        "is": {}
+      },
+      "64b7": {
+        "building": "POWER",
+        "num": {
+          "power": 15
         },
         "is": {}
       },
@@ -5392,6 +6109,11 @@
         "is": {}
       },
       "3ff4": {
+        "building": "MANUFACTURE",
+        "num": {},
+        "is": {}
+      },
+      "4e6d": {
         "building": "MANUFACTURE",
         "num": {},
         "is": {}
@@ -5501,6 +6223,15 @@
         "building": "MANUFACTURE",
         "num": {
           "capacity": 15
+        },
+        "is": {
+          "仓库容量": 1
+        }
+      },
+      "d88c": {
+        "building": "MANUFACTURE",
+        "num": {
+          "capacity": 4
         },
         "is": {
           "仓库容量": 1
@@ -5625,6 +6356,15 @@
           "通用生产": 1
         }
       },
+      "6aef": {
+        "building": "MANUFACTURE",
+        "num": {
+          "product": 1
+        },
+        "is": {
+          "通用生产": 1
+        }
+      },
       "c3d0": {
         "building": "MANUFACTURE",
         "num": {
@@ -5652,10 +6392,37 @@
           "作战记录": 1
         }
       },
+      "82d0": {
+        "building": "MANUFACTURE",
+        "num": {
+          "product": 20
+        },
+        "is": {
+          "作战记录": 1
+        }
+      },
       "a9d8": {
         "building": "MANUFACTURE",
         "num": {
           "product": 20
+        },
+        "is": {
+          "贵金属": 1
+        }
+      },
+      "ef5e": {
+        "building": "MANUFACTURE",
+        "num": {
+          "product": 25
+        },
+        "is": {
+          "贵金属": 1
+        }
+      },
+      "c713": {
+        "building": "MANUFACTURE",
+        "num": {
+          "product": 2
         },
         "is": {
           "贵金属": 1
@@ -5679,7 +6446,21 @@
           "源石": 1
         }
       },
+      "319e": {
+        "building": "MANUFACTURE",
+        "num": {
+          "product": 35
+        },
+        "is": {
+          "作战记录": 1
+        }
+      },
       "d520": {
+        "building": "MANUFACTURE",
+        "num": {},
+        "is": {}
+      },
+      "caee": {
         "building": "MANUFACTURE",
         "num": {},
         "is": {}
@@ -5735,6 +6516,11 @@
           "订单效率": 1
         }
       },
+      "701a": {
+        "building": "TRADING",
+        "num": {},
+        "is": {}
+      },
       "f020": {
         "building": "TRADING",
         "num": {
@@ -5748,6 +6534,15 @@
         "building": "TRADING",
         "num": {
           "order": 35
+        },
+        "is": {
+          "订单效率": 1
+        }
+      },
+      "0479": {
+        "building": "TRADING",
+        "num": {
+          "order": 100
         },
         "is": {
           "订单效率": 1
@@ -5894,6 +6689,24 @@
         "is": {
           "订单效率": 1,
           "订单上限": 1
+        }
+      },
+      "a4d1": {
+        "building": "TRADING",
+        "num": {
+          "order": 20
+        },
+        "is": {
+          "订单效率": 1
+        }
+      },
+      "2dac": {
+        "building": "TRADING",
+        "num": {
+          "order": 25
+        },
+        "is": {
+          "订单效率": 1
         }
       },
       "a027": {
@@ -6056,6 +6869,24 @@
           "订单效率": 1
         }
       },
+      "558b": {
+        "building": "TRADING",
+        "num": {
+          "order": 25
+        },
+        "is": {
+          "订单效率": 1
+        }
+      },
+      "273e": {
+        "building": "TRADING",
+        "num": {
+          "order": 30
+        },
+        "is": {
+          "订单效率": 1
+        }
+      },
       "7e8d": {
         "building": "WORKSHOP",
         "num": {
@@ -6147,6 +6978,11 @@
         "num": {},
         "is": {}
       },
+      "bf0b": {
+        "building": "WORKSHOP",
+        "num": {},
+        "is": {}
+      },
       "1af4": {
         "building": "WORKSHOP",
         "num": {},
@@ -6206,6 +7042,15 @@
           "精英材料": 1
         }
       },
+      "7d56": {
+        "building": "WORKSHOP",
+        "num": {
+          "byproduct": 75
+        },
+        "is": {
+          "基建材料": 1
+        }
+      },
       "507d": {
         "building": "WORKSHOP",
         "num": {
@@ -6257,15 +7102,6 @@
           "基建材料": 1
         }
       },
-      "7d56": {
-        "building": "WORKSHOP",
-        "num": {
-          "byproduct": 75
-        },
-        "is": {
-          "基建材料": 1
-        }
-      },
       "c168": {
         "building": "WORKSHOP",
         "num": {
@@ -6299,6 +7135,11 @@
         "num": {},
         "is": {}
       },
+      "6b8e": {
+        "building": "WORKSHOP",
+        "num": {},
+        "is": {}
+      },
       "7cd2": {
         "building": "WORKSHOP",
         "num": {},
@@ -6312,6 +7153,11 @@
         "is": {
           "全能": 1
         }
+      },
+      "f078": {
+        "building": "TRAINING",
+        "num": {},
+        "is": {}
       },
       "69ae": {
         "building": "TRAINING",
@@ -6377,6 +7223,15 @@
         "building": "TRAINING",
         "num": {},
         "is": {}
+      },
+      "7d1c": {
+        "building": "TRAINING",
+        "num": {
+          "train": 1
+        },
+        "is": {
+          "近卫": 1
+        }
       },
       "ae98": {
         "building": "TRAINING",
@@ -6592,6 +7447,15 @@
         },
         "is": {
           "近卫": 1
+        }
+      },
+      "b515": {
+        "building": "TRAINING",
+        "num": {
+          "train": 30
+        },
+        "is": {
+          "狙击": 1
         }
       },
       "9faa": {
@@ -6826,7 +7690,7 @@
           "单体恢复": 1
         }
       },
-      "ed35": {
+      "ea1e": {
         "building": "DORMITORY",
         "num": {
           "moraleRecoverySingle": 0.55
@@ -6884,6 +7748,11 @@
         "is": {
           "群体恢复": 1
         }
+      },
+      "fa08": {
+        "building": "DORMITORY",
+        "num": {},
+        "is": {}
       },
       "c88d": {
         "building": "DORMITORY",
@@ -6957,6 +7826,24 @@
           "单体恢复": 1
         }
       },
+      "720f": {
+        "building": "DORMITORY",
+        "num": {
+          "moraleRecoverySingle": 0.4
+        },
+        "is": {
+          "单体恢复": 1
+        }
+      },
+      "c1b3": {
+        "building": "DORMITORY",
+        "num": {
+          "moraleRecoverySingle": 0.55
+        },
+        "is": {
+          "单体恢复": 1
+        }
+      },
       "355a": {
         "building": "DORMITORY",
         "num": {
@@ -6998,6 +7885,15 @@
           "群体恢复": 1
         }
       },
+      "3b66": {
+        "building": "DORMITORY",
+        "num": {
+          "moraleRecoveryAll": 0.06
+        },
+        "is": {
+          "群体恢复": 1
+        }
+      },
       "f505": {
         "building": "DORMITORY",
         "num": {},
@@ -7007,6 +7903,29 @@
         "building": "DORMITORY",
         "num": {},
         "is": {}
+      },
+      "16ec": {
+        "building": "DORMITORY",
+        "num": {},
+        "is": {}
+      },
+      "8bed": {
+        "building": "DORMITORY",
+        "num": {
+          "moraleRecoveryAll": 0.2
+        },
+        "is": {
+          "群体恢复": 1
+        }
+      },
+      "70a7": {
+        "building": "DORMITORY",
+        "num": {
+          "moraleRecoveryAll": 0.15
+        },
+        "is": {
+          "群体恢复": 1
+        }
       },
       "21f6": {
         "building": "HIRE",
@@ -7064,6 +7983,13 @@
         },
         "is": {}
       },
+      "5dee": {
+        "building": "HIRE",
+        "num": {
+          "connect": 30
+        },
+        "is": {}
+      },
       "e713": {
         "building": "HIRE",
         "num": {
@@ -7080,6 +8006,13 @@
         "building": "HIRE",
         "num": {
           "connect": 35
+        },
+        "is": {}
+      },
+      "9d7c": {
+        "building": "HIRE",
+        "num": {
+          "connect": 30
         },
         "is": {}
       },
@@ -7109,7 +8042,19 @@
         "num": {},
         "is": {}
       },
+      "ed7f": {
+        "building": "HIRE",
+        "num": {},
+        "is": {}
+      },
       "7a39": {
+        "building": "HIRE",
+        "num": {
+          "connect": 20
+        },
+        "is": {}
+      },
+      "d3fa": {
         "building": "HIRE",
         "num": {
           "connect": 20
@@ -7152,6 +8097,29 @@
           "无特别加成": 1
         }
       },
+      "6d79": {
+        "building": "MEETING",
+        "num": {
+          "collect": 10
+        },
+        "is": {
+          "无特别加成": 1
+        }
+      },
+      "5b6b": {
+        "building": "MEETING",
+        "num": {
+          "collect": 10
+        },
+        "is": {
+          "无特别加成": 1
+        }
+      },
+      "717c": {
+        "building": "MEETING",
+        "num": {},
+        "is": {}
+      },
       "fd91": {
         "building": "MEETING",
         "num": {
@@ -7188,12 +8156,26 @@
           "无特别加成": 1
         }
       },
+      "952b": {
+        "building": "MEETING",
+        "num": {
+          "collect": 30
+        },
+        "is": {
+          "无特别加成": 1
+        }
+      },
       "341d": {
         "building": "MEETING",
         "num": {},
         "is": {
           "线索4": 1
         }
+      },
+      "779f": {
+        "building": "MEETING",
+        "num": {},
+        "is": {}
       },
       "308a": {
         "building": "MEETING",

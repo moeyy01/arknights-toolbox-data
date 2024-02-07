@@ -23,13 +23,17 @@
     "name": "Soundless Resonance",
     "desc": "Affects skills related to <$cc.bd_B_1><@cc.rem>Lingering Melody</></> and <$cc.bd_B_2><@cc.rem>Harmony Astray</></>\nProvided by the following Operator's skills:\nEbenholz"
   },
+  "cc_bd_C": {
+    "name": "Witchcraft Crystal",
+    "desc": "Operators with this skill\nJieyun"
+  },
   "cc_bd_a1": {
     "name": "Perception Information",
     "desc": "Affects skills related to <$cc.bd_A><@cc.rem>Chain of Thought</></> and <$cc.bd_B><@cc.rem>Soundless Resonance</></>\nProvided by the following Operators' skills:\nRosmontis, Ebenholz, Dusk, Ling, Whisperain, Iris, Czerny"
   },
   "cc_bd_b1": {
     "name": "Worldly Plight",
-    "desc": "Provided by the following Operators' skills\nDusk, Ling, Mr. Nothing, Mulberry"
+    "desc": "Affects <$cc.bd_C><@cc.rem>Witchcraft Crystal</></> skills\nProvided by the following Operators' skills\nDusk, Ling, Chongyue, Mr. Nothing, Mulberry"
   },
   "cc_bd_ash": {
     "name": "Intelligence Reserve",
@@ -58,6 +62,18 @@
   "cc_bd_costdrop": {
     "name": "Morale Difference",
     "desc": "Difference between an Operator's max morale and current morale"
+  },
+  "cc_bd_felyne": {
+    "name": "Felvine",
+    "desc": "Affects related skills <$cc.bd_felyne_1><@cc.rem>Lovable Felynes</></>, <$cc.bd_felyne_2><@cc.rem>Trusty Buddies</></>\nProvided by the following Operators' skills\nRathalos S Noir Corne, Kirin R Yato"
+  },
+  "cc_bd_felyne_1": {
+    "name": "Lovable Felynes",
+    "desc": "Operator with this skill\nTerra Research Commission"
+  },
+  "cc_bd_felyne_2": {
+    "name": "Trusty Buddies",
+    "desc": "Operator with this skill\nTerra Research Commission"
   },
   "cc_m_var1": {
     "name": "Recycling",
@@ -109,7 +125,15 @@
   },
   "cc_g_sui": {
     "name": "Sui",
-    "desc": "Includes the following Operators\nNian, Dusk, Ling"
+    "desc": "Includes the following Operators\nNian, Dusk, Ling, Chongyue"
+  },
+  "cc_g_glasgow": {
+    "name": "Glasgow Gang",
+    "desc": "Includes the following Operators:\nSiege, Morgan, Dagda, Indra"
+  },
+  "cc_g_rh": {
+    "name": "Rhine Lab",
+    "desc": "Includes the following Operators:\nSilence, Ifrit, Saria, Ptilopsis, Mayer, Magallan, Dorothy, Astgenne, Muelsyse"
   },
   "cc_c_abyssal2_1": {
     "name": "Special Bonus",
@@ -138,6 +162,10 @@
   "cc_t_strong2": {
     "name": "Special Interaction Rules",
     "desc": "Cannot stack with <$cc.t.snsant1><@cc.rem>Heavenly Reward α</></>, <$cc.t.snsant2><@cc.rem>Heavenly Reward β</></>, and will take precedence instead\nWhen <$cc.t.snsant1><@cc.rem>Heavenly Reward α</></>, <$cc.t.snsant2><@cc.rem>Heavenly Reward β</></> stacks with other skills, this skill will take effect on the resulting effect"
+  },
+  "cc_c_sui2_1": {
+    "name": "Special comparison rules",
+    "desc": "Compare hourly Morale recovery totals of <$cc.c.room2><@cc.kw>other buildings</></> provided by other Operator skills in the Control Center. The strongest effect applies."
   },
   "cc_m_pow1": {
     "name": "Automation α",
@@ -169,23 +197,31 @@
   },
   "cc_sk_manu2": {
     "name": "Rhine Tech-type Skill",
-    "desc": "Includes the following skills\nRhine Tech α, Rhine Tech β"
+    "desc": "Includes the following skills:\nRhine Tech α, Rhine Tech β, Rhine Tech γ"
   },
   "cc_sk_manu3": {
     "name": "Pinus Sylvestris Skills",
     "desc": "Includes the following skills: \nPinus Sylvestris α, Pinus Sylvestris β"
   },
+  "cc_sk_manu4": {
+    "name": "Metalwork-type Skill",
+    "desc": "Includes the following skills:\nMetalwork α, Metalwork β"
+  },
   "cc_tag_op": {
     "name": "Operation Platform",
-    "desc": "Includes the following Operators: \nLancet-2, Castle-3, THRM-EX, 'Justice Knight'"
+    "desc": "Includes the following Operators:\nLancet-2, Castle-3, THRM-EX, Justice Knight, Friston-3"
   },
   "cc_tag_knight": {
     "name": "Knight",
-    "desc": "Includes the following Operators: \nNearl the Radiant Knight, Nearl (mutually exclusive), Blemishine, Whislash, Flametail, Fartooth, Ashlock, Wild Mane, 'Justice Knight', Gravel"
+    "desc": "Includes the following operators\nNearl the Radiant Knight, Nearl, Blemishine, Whislash, Flametail, Fartooth, Ashlock, Wild Mane, Justice Knight, Gravel"
   },
   "cc_tag_durin": {
     "name": "Durin",
     "desc": "Includes the following Operators:\nMinimalist, Myrtle, Chestnut, Durin"
+  },
+  "cc_tag_mh": {
+    "name": "Monster Hunter Party",
+    "desc": "Includes the following Operators:\nRathalos S Noir Corne, Kirin R Yato, Terra Research Commission"
   },
   "cc_gvial": {
     "name": "Gavial",

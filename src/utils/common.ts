@@ -8,10 +8,14 @@ import {
   CHIP_ASSISTANT_ID,
   DATA_DIR,
   FormulasKeyMap,
+  GAME_DATA_DIR,
   LangMap,
   LOCALES_DIR,
   OTHER_DATA_DIR,
   PURCHASE_CERTIFICATE_ID,
+  UPDATE_FROM_ARKNTOOLS,
+  UPDATE_FROM_YUANYAN,
+  UPDATE_SOURCE,
 } from 'constant';
 
 export const ensureReadJsonSync = <T = any>(...args: Parameters<typeof readJsonSync>): T | undefined => {
@@ -87,7 +91,7 @@ export const getHasDropStageList = (stages: StageTable['stages']) => {
 export const getResourceURL = (repo: string, branch: string, path: string) =>
   `https://raw.githubusercontent.com/${repo}/${branch}/${path}`;
 
-const getDataURL = (lang: string) =>
+const getDataURL = (lang: string, langShort: string) =>
   transform(
     [
       'character_table.json',
@@ -110,14 +114,26 @@ const getDataURL = (lang: string) =>
         if (tLang === lang) file = tFile;
         else return;
       }
-      obj[camelCase(file.split('.')[0])] =
-        process.env.UPDATE_SOURCE === 'local'
-          ? resolve(__dirname, `../../../ArknightsGameData/${lang}/gamedata/excel/${file}`)
-          : getResourceURL('Kengxxiao/ArknightsGameData', 'master', `${lang}/gamedata/excel/${file}`);
+      const key = camelCase(file.split('.')[0]);
+      if (UPDATE_FROM_ARKNTOOLS) {
+        obj[key] = resolve(GAME_DATA_DIR, `${langShort}/excel/${file}`);
+      } else if (UPDATE_FROM_YUANYAN) {
+        const localDir = langShort === 'us' ? 'en' : langShort;
+        obj[key] =
+          langShort === 'cn'
+            ? getResourceURL('yuanyan3060/ArknightsGameResource', 'main', `gamedata/excel/${file}`)
+            : resolve(GAME_DATA_DIR, `${localDir}/gamedata/excel/${file}`);
+      } else {
+        obj[key] =
+          UPDATE_SOURCE === 'local'
+            ? resolve(__dirname, `../../../ArknightsGameData/${lang}/gamedata/excel/${file}`)
+            : getResourceURL('Kengxxiao/ArknightsGameData', 'master', `${lang}/gamedata/excel/${file}`);
+      }
     },
     {} as Record<string, string>,
   );
-export const gameDataUrl = mapValues(LangMap, lang => getDataURL(lang));
+
+export const gameDataUrl = mapValues(LangMap, getDataURL);
 
 export const getNameForRecruitment = (name: string) => name.replace(/'|"/g, '');
 
@@ -126,7 +142,7 @@ export const getRecruitmentTable = (recruitDetail: string): Record<string, numbe
   Object.fromEntries(
     recruitDetail
       .replace(/\\n/g, '\n')
-      .split(/\s*-*\n★+\s*/)
+      .split(/\s*-*\s*★+\s*/)
       .splice(1)
       .map(line => line.split(/(?<!<)\/(?!>)/).map(name => name.trim()))
       .flat()
@@ -208,6 +224,10 @@ const handleNewDataFormatInside = (obj: any, curKey: string): void => {
   if (typeof curVal === 'object') {
     handleNewDataFormat(curVal, false);
   }
+  if (UPDATE_FROM_YUANYAN && curKey === 'specializeLevelUpData') {
+    obj.levelUpCostCond = curVal;
+    delete obj.specializeLevelUpData;
+  }
 };
 export const handleNewDataFormat = (obj: any, isRoot = true): any => {
   if (typeof obj !== 'object') return obj;
@@ -229,3 +249,5 @@ export const fixEnumNum = (val: string | number, offset = 0) =>
 export const forceEnumNum = <T extends Object>(orig: keyof T | T[keyof T], enumObj: T): T[keyof T] =>
   // @ts-expect-error
   typeof orig === 'number' ? orig : enumObj[orig];
+
+export const fixI18nKey = (str: string) => str.replace(/[[\]'".@]/g, '_');
