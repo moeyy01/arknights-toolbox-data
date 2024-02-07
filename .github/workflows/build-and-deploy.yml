@@ -1,48 +1,38 @@
 name: Build and deploy
 
 on:
-  workflow_dispatch:
   push:
     branches:
       - main
-    paths:
-      - 'assets/**'
-      - 'build/**'
 
 jobs:
   build:
-    if: "!contains(toJSON(github.event.commits.*.message), '--skip-ci')"
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-      - name: Setup Node.js 16
-        uses: actions/setup-node@v3
+      - name: Checkout Repository master branch
+        uses: actions/checkout@master
+
+      - name: Setup Node.js 18.x
+        uses: actions/setup-node@master
         with:
-          node-version: 16
-      - name: Install dependencies
-        run: yarn install --frozen-lockfile
-      - name: Build
-        env:
-          TZ: Asia/Shanghai
-        run: yarn build
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+          node-version: '18.x'
+          
+      - name: Install and Build
+        run: |
+          yarn install
+          yarn build
+
+      - name: Set arknights-toolbox-data Config
+        uses: manyuanrong/setup-ossutil@master
         with:
-          path: './dist'
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    concurrency:
-      group: 'pages'
-      cancel-in-progress: true
-    permissions:
-      pages: write
-      id-token: write
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v1
+          endpoint: oss-cn-hongkong.aliyuncs.com
+          access-key-id: ${{ secrets.OSS_KEY }}
+          access-key-secret: ${{ secrets.OSS_SECRET }}
+
+      - name: Delete Files
+        run: |
+          ossutil64 rm -r oss://arknights-toolbox-data/
+      
+      - name: Upload Files
+        run: |
+          ossutil cp -j 200 -rf dist/ oss://arknights-toolbox-data/
