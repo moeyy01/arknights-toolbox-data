@@ -35,4 +35,4 @@ jobs:
       
       - name: Upload Files
         run: |
-          ossutil cp -j 200 -rf dist/ oss://arknights-toolbox-data/  --meta=Cache-Control:max-age=3600 --meta=Access-Control-Allow-Origin:*
+          ossutil cp -j 200 -rf dist/ oss://arknights-toolbox-data/  --meta=Cache-Control:max-age=3600
