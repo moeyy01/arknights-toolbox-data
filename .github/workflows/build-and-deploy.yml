@@ -22,7 +22,7 @@ jobs:
           yarn install
           yarn build
 
-      - name: Set arknights-toolbox-data Config
+      - name: Set Config
         uses: manyuanrong/setup-ossutil@master
         with:
           endpoint: oss-cn-hongkong.aliyuncs.com
