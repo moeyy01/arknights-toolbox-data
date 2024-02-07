@@ -31,7 +31,7 @@ jobs:
 
       - name: Delete Files
         run: |
-          ossutil64 rm -r oss://arknights-toolbox-data/
+          ossutil rm -rf oss://arknights-toolbox-data/
       
       - name: Upload Files
         run: |
