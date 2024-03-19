@@ -635,7 +635,8 @@
       "cn": 1,
       "us": 1,
       "jp": 1,
-      "kr": 1
+      "kr": 1,
+      "tw": 1
     },
     "position": 10,
     "profession": 6,
@@ -2060,7 +2061,8 @@
       "cn": 1,
       "us": 1,
       "jp": 1,
-      "kr": 1
+      "kr": 1,
+      "tw": 1
     },
     "position": 9,
     "profession": 1,
@@ -3601,7 +3603,7 @@
       "full": "bingniang",
       "head": "bn"
     },
-    "romaji": "",
+    "romaji": "korudoshotto",
     "appellation": "Coldshot",
     "star": 5,
     "recruitment": {},
@@ -3670,7 +3672,7 @@
       "full": "xingren",
       "head": "xr"
     },
-    "romaji": "",
+    "romaji": "amondo",
     "appellation": "Almond",
     "star": 5,
     "recruitment": {},
@@ -4662,7 +4664,8 @@
       "cn": 1,
       "us": 1,
       "jp": 1,
-      "kr": 1
+      "kr": 1,
+      "tw": 1
     },
     "position": 10,
     "profession": 5,
@@ -5268,7 +5271,7 @@
       "full": "dihuojiexika",
       "head": "dhjxk"
     },
-    "romaji": "",
+    "romaji": "滌hijieshika",
     "appellation": "Jessica the Liberated",
     "star": 6,
     "recruitment": {},
