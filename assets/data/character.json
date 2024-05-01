@@ -141,6 +141,24 @@
       22
     ]
   },
+  "4136_phonor": {
+    "pinyin": {
+      "full": "",
+      "head": ""
+    },
+    "romaji": "",
+    "appellation": "PhonoR-0",
+    "star": 1,
+    "recruitment": {
+      "cn": 2
+    },
+    "position": 10,
+    "profession": 5,
+    "tags": [
+      28,
+      29
+    ]
+  },
   "502_nblade": {
     "pinyin": {
       "full": "yedao",
@@ -834,6 +852,8 @@
     "star": 4,
     "recruitment": {
       "cn": 1,
+      "us": 1,
+      "jp": 1,
       "kr": 1
     },
     "position": 10,
@@ -862,7 +882,7 @@
       "full": "yueyue",
       "head": "yy"
     },
-    "romaji": "",
+    "romaji": "keipa",
     "appellation": "Caper",
     "star": 4,
     "recruitment": {},
@@ -1432,7 +1452,9 @@
     "romaji": "baburu",
     "appellation": "Bubble",
     "star": 4,
-    "recruitment": {},
+    "recruitment": {
+      "cn": 1
+    },
     "position": 9,
     "profession": 3,
     "tags": [
@@ -1793,6 +1815,22 @@
       19
     ]
   },
+  "1036_fang2": {
+    "pinyin": {
+      "full": "lizhenruiqiangfen",
+      "head": "lzrqf"
+    },
+    "romaji": "",
+    "appellation": "Fang the Fire-sharpened",
+    "star": 5,
+    "recruitment": {},
+    "position": 9,
+    "profession": 8,
+    "tags": [
+      18,
+      19
+    ]
+  },
   "401_elysm": {
     "pinyin": {
       "full": "jijing",
@@ -2028,6 +2066,8 @@
     "star": 5,
     "recruitment": {
       "cn": 1,
+      "us": 1,
+      "jp": 1,
       "kr": 1
     },
     "position": 9,
@@ -2543,7 +2583,9 @@
     "romaji": "aosuta",
     "appellation": "Aosta",
     "star": 5,
-    "recruitment": {},
+    "recruitment": {
+      "cn": 1
+    },
     "position": 10,
     "profession": 2,
     "tags": [
@@ -2882,13 +2924,14 @@
       "full": "zheguang",
       "head": "zg"
     },
-    "romaji": "",
+    "romaji": "deiamante",
     "appellation": "Diamante",
     "star": 5,
     "recruitment": {},
     "position": 10,
     "profession": 6,
     "tags": [
+      29,
       19
     ]
   },
@@ -2904,6 +2947,7 @@
     "position": 10,
     "profession": 6,
     "tags": [
+      29,
       13
     ]
   },
@@ -3188,7 +3232,7 @@
       "full": "shenlv",
       "head": "sl"
     },
-    "romaji": "",
+    "romaji": "besurain",
     "appellation": "Bassline",
     "star": 5,
     "recruitment": {},
@@ -3964,7 +4008,9 @@
     "recruitment": {},
     "position": 10,
     "profession": 5,
-    "tags": []
+    "tags": [
+      29
+    ]
   },
   "215_mantic": {
     "pinyin": {
@@ -4307,6 +4353,21 @@
       19
     ]
   },
+  "1035_wisdel": {
+    "pinyin": {
+      "full": "weishendaier",
+      "head": "wsde"
+    },
+    "romaji": "",
+    "appellation": "Wis'adel",
+    "star": 6,
+    "recruitment": {},
+    "position": 10,
+    "profession": 2,
+    "tags": [
+      19
+    ]
+  },
   "1013_chen2": {
     "pinyin": {
       "full": "jiariweilongchen",
@@ -4577,6 +4638,21 @@
       12
     ]
   },
+  "4133_logos": {
+    "pinyin": {
+      "full": "luogesi",
+      "head": "lgs"
+    },
+    "romaji": "",
+    "appellation": "Logos",
+    "star": 6,
+    "recruitment": {},
+    "position": 10,
+    "profession": 6,
+    "tags": [
+      19
+    ]
+  },
   "2015_dusk": {
     "pinyin": {
       "full": "xi",
@@ -4766,6 +4842,23 @@
       19
     ]
   },
+  "4134_cetsyr": {
+    "pinyin": {
+      "full": "mowang",
+      "head": "mw"
+    },
+    "romaji": "",
+    "appellation": "Civilight Eterna",
+    "star": 6,
+    "recruitment": {},
+    "position": 10,
+    "profession": 5,
+    "tags": [
+      16,
+      20,
+      19
+    ]
+  },
   "1031_slent2": {
     "pinyin": {
       "full": "cuiyuhemo",
@@ -4821,13 +4914,14 @@
       "full": "suxin",
       "head": "sx"
     },
-    "romaji": "",
+    "romaji": "birutouosa",
     "appellation": "Virtuosa",
     "star": 6,
     "recruitment": {},
     "position": 10,
     "profession": 5,
     "tags": [
+      29,
       16
     ]
   },
@@ -5223,7 +5317,9 @@
     "romaji": "buremishain",
     "appellation": "Blemishine",
     "star": 6,
-    "recruitment": {},
+    "recruitment": {
+      "cn": 1
+    },
     "position": 9,
     "profession": 3,
     "tags": [
@@ -5308,6 +5404,8 @@
     "star": 6,
     "recruitment": {
       "cn": 1,
+      "us": 1,
+      "jp": 1,
       "kr": 1
     },
     "position": 9,
@@ -5573,7 +5671,7 @@
       "full": "weiweianna",
       "head": "wwan"
     },
-    "romaji": "",
+    "romaji": "bibiana",
     "appellation": "Viviana",
     "star": 6,
     "recruitment": {},
@@ -5658,7 +5756,7 @@
       "full": "zhisong",
       "head": "zs"
     },
-    "romaji": "",
+    "romaji": "resshingu",
     "appellation": "Lessing",
     "star": 6,
     "recruitment": {},
