@@ -2206,7 +2206,7 @@
         "cost": 21
       }
     },
-    "act25side_zone1": {
+    "act25sre_zone1": {
       "act25side_01": {
         "code": "CW-1",
         "cost": 9
@@ -3436,6 +3436,48 @@
         "cost": 15
       }
     },
+    "act25side_zone1": {
+      "act25side_01": {
+        "code": "CW-1",
+        "cost": 9
+      },
+      "act25side_02": {
+        "code": "CW-2",
+        "cost": 9
+      },
+      "act25side_03": {
+        "code": "CW-3",
+        "cost": 9
+      },
+      "act25side_04": {
+        "code": "CW-4",
+        "cost": 12
+      },
+      "act25side_05": {
+        "code": "CW-5",
+        "cost": 12
+      },
+      "act25side_06": {
+        "code": "CW-6",
+        "cost": 15
+      },
+      "act25side_07": {
+        "code": "CW-7",
+        "cost": 15
+      },
+      "act25side_08": {
+        "code": "CW-8",
+        "cost": 21
+      },
+      "act25side_09": {
+        "code": "CW-9",
+        "cost": 21
+      },
+      "act25side_10": {
+        "code": "CW-10",
+        "cost": 21
+      }
+    },
     "act23side_zone1": {
       "act23side_01": {
         "code": "WB-1",
@@ -3577,44 +3619,6 @@
       },
       "act21side_10": {
         "code": "IS-10",
-        "cost": 21
-      }
-    },
-    "act20side_zone1": {
-      "act20side_01": {
-        "code": "IC-1",
-        "cost": 9
-      },
-      "act20side_02": {
-        "code": "IC-2",
-        "cost": 9
-      },
-      "act20side_03": {
-        "code": "IC-3",
-        "cost": 12
-      },
-      "act20side_04": {
-        "code": "IC-4",
-        "cost": 12
-      },
-      "act20side_05": {
-        "code": "IC-5",
-        "cost": 15
-      },
-      "act20side_06": {
-        "code": "IC-6",
-        "cost": 15
-      },
-      "act20side_07": {
-        "code": "IC-7",
-        "cost": 21
-      },
-      "act20side_08": {
-        "code": "IC-8",
-        "cost": 21
-      },
-      "act20side_09": {
-        "code": "IC-9",
         "cost": 21
       }
     },
