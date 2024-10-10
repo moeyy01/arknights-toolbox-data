@@ -53,6 +53,7 @@
     "recruitment": {
       "cn": 2,
       "us": 2,
+      "jp": 2,
       "kr": 2,
       "tw": 2
     },
@@ -1470,7 +1471,7 @@
       "full": "lutuo",
       "head": "lt"
     },
-    "romaji": "",
+    "romaji": "rutonada",
     "appellation": "Lutonada",
     "star": 4,
     "recruitment": {},
@@ -2427,7 +2428,7 @@
       "full": "aoda",
       "head": "ad"
     },
-    "romaji": "",
+    "romaji": "odda",
     "appellation": "Odda",
     "star": 5,
     "recruitment": {},
@@ -2920,7 +2921,7 @@
       "full": "aluoma",
       "head": "alm"
     },
-    "romaji": "",
+    "romaji": "aroma",
     "appellation": "Aroma",
     "star": 5,
     "recruitment": {},
@@ -4050,6 +4051,22 @@
       16
     ]
   },
+  "4162_cathy": {
+    "pinyin": {
+      "full": "kaiselin",
+      "head": "ksl"
+    },
+    "romaji": "",
+    "appellation": "Catherine",
+    "star": 5,
+    "recruitment": {},
+    "position": 9,
+    "profession": 5,
+    "tags": [
+      22,
+      16
+    ]
+  },
   "101_sora": {
     "pinyin": {
       "full": "kong",
@@ -4143,6 +4160,21 @@
     },
     "romaji": "bararukubin",
     "appellation": "Valarqvin",
+    "star": 5,
+    "recruitment": {},
+    "position": 10,
+    "profession": 5,
+    "tags": [
+      29
+    ]
+  },
+  "487_bobb": {
+    "pinyin": {
+      "full": "bobu",
+      "head": "bb"
+    },
+    "romaji": "",
+    "appellation": "Bobbing",
     "star": 5,
     "recruitment": {},
     "position": 10,
@@ -5300,7 +5332,7 @@
       "full": "asikalun",
       "head": "askl"
     },
-    "romaji": "",
+    "romaji": "asukaron",
     "appellation": "Ascalon",
     "star": 6,
     "recruitment": {},
@@ -5916,6 +5948,22 @@
     },
     "romaji": "bibiana",
     "appellation": "Viviana",
+    "star": 6,
+    "recruitment": {},
+    "position": 9,
+    "profession": 1,
+    "tags": [
+      19,
+      20
+    ]
+  },
+  "1019_siege2": {
+    "pinyin": {
+      "full": "weina·weiduoliya",
+      "head": "wn·wdly"
+    },
+    "romaji": "",
+    "appellation": "Vina Victoria",
     "star": 6,
     "recruitment": {},
     "position": 9,
