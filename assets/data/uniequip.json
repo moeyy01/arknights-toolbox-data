@@ -1009,5 +1009,59 @@
   },
   "uniequip_002_skadi2": {
     "typeIcon": "bar-x"
+  },
+  "uniequip_002_cello": {
+    "typeIcon": "rit-x"
+  },
+  "uniequip_002_threye": {
+    "typeIcon": "rit-x"
+  },
+  "uniequip_002_bobb": {
+    "typeIcon": "rit-x"
+  },
+  "uniequip_002_whitw2": {
+    "typeIcon": "fun-x"
+  },
+  "uniequip_002_vulpis": {
+    "typeIcon": "sol-x"
+  },
+  "uniequip_002_crosly": {
+    "typeIcon": "exe-x"
+  },
+  "uniequip_002_talr": {
+    "typeIcon": "mer-x"
+  },
+  "uniequip_003_lessng": {
+    "typeIcon": "dre-y"
+  },
+  "uniequip_004_aglina": {
+    "typeIcon": "isw-a"
+  },
+  "uniequip_003_rosmon": {
+    "typeIcon": "isw-a"
+  },
+  "uniequip_002_acnipe": {
+    "typeIcon": "mar-x"
+  },
+  "uniequip_002_acspec": {
+    "typeIcon": "exe-x"
+  },
+  "uniequip_002_acguad": {
+    "typeIcon": "dre-x"
+  },
+  "uniequip_002_acfend": {
+    "typeIcon": "pro-x"
+  },
+  "uniequip_002_acsupo": {
+    "typeIcon": "dec-x"
+  },
+  "uniequip_002_accast": {
+    "typeIcon": "spc-x"
+  },
+  "uniequip_002_acpion": {
+    "typeIcon": "sol-x"
+  },
+  "uniequip_002_acmedc": {
+    "typeIcon": "phy-x"
   }
 }
